@@ -13,7 +13,7 @@ class Game < ApplicationRecord
 
     validates :name, presence: true, uniqueness: true 
     validates :category, presence: true
-    validates :rating, inclusion: 0..100
+    validates :rating, inclusion: 0..100, allow_blank: true
     validate :parent_exist_if_expansion
 
     def parent_exist_if_expansion

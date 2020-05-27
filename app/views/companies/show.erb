@@ -5,3 +5,5 @@
   <li>Country: <%= @companies.country%></li>
 </ul>
 
+<%=link_to "Go back to Companies", companies_path%>
+<%=link_to "Delete this Company", company_path(@companies), method: :delete, data: { confirm: "Really delete the company?" } %>
